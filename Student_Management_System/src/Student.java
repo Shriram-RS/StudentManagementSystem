@@ -23,7 +23,6 @@ public class Student {
 		return id;
 	}
 
-	// Override equals and hashCode based on 'id' for uniqueness
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) return true;
