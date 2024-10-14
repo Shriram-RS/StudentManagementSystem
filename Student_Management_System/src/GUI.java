@@ -19,10 +19,9 @@ public class GUI extends JFrame {
 	private JPanel cardPanel = new JPanel(cardLayout);
 	private JPanel mainPanel = new JPanel();
 	private JPanel detailsPanel = new JPanel();
-	private JTextField newCourseField; // Add this line
+	private JTextField newCourseField;
 
 	public GUI() {
-		// Set Look and Feel to Nimbus for a modern appearance
 		try {
 			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
@@ -31,18 +30,14 @@ public class GUI extends JFrame {
 				}
 			}
 		} catch (Exception e) {
-			// If Nimbus is not available, fall back to default
 		}
 
-		// Initialize Panels
 		initializeMainPanel();
 		initializeDetailsPanel();
 
-		// Add Panels to CardLayout
 		cardPanel.add(mainPanel, "Main");
 		cardPanel.add(detailsPanel, "Details");
 
-		// Configure Frame
 		this.add(cardPanel);
 		this.setTitle("Student Management System");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,10 +49,10 @@ public class GUI extends JFrame {
 
 	private void initializeMainPanel() {
 		mainPanel.setLayout(new GridBagLayout());
-		mainPanel.setBorder(new EmptyBorder(20, 20, 20, 20)); // Add padding
+		mainPanel.setBorder(new EmptyBorder(20, 20, 20, 20)); 
 
 		GridBagConstraints gbc = new GridBagConstraints();
-		gbc.insets = new Insets(10, 10, 10, 10); // Component spacing
+		gbc.insets = new Insets(10, 10, 10, 10); 
 		gbc.anchor = GridBagConstraints.WEST;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		gbc.weightx = 1;
