@@ -5,12 +5,11 @@ import java.sql.SQLException;
 
 public class DatabaseUtil {
     private static final String URL = "jdbc:mysql://localhost:3306/student_management?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root"; // Replace with your MySQL username
-    private static final String PASSWORD = "Shri2004"; // Replace with your MySQL password
+    private static final String USER = "root"; 
+    private static final String PASSWORD = "Shri2004"; 
 
     static {
         try {
-            // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             System.err.println("Failed to load MySQL JDBC driver.");
